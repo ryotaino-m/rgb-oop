@@ -1,0 +1,11 @@
+version: '3'
+services:
+# docker-compose exec php_service bash #これでコンテナに入れる
+  php_service:
+    container_name: php_container
+    build:
+      context: './php/'
+    volumes:
+      - './php:/var/www/html'
+    ports:
+      - '80:80'
